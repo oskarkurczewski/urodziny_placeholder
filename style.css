@@ -14,6 +14,12 @@ body {
    backdrop-filter: blur(0.5px);
    font-family: 'ClashDisplay-Variable';
 
+   main {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+   }
+
    a, p {
       font-size: 20px;
       text-decoration: none;
@@ -26,9 +32,9 @@ body {
       text-decoration-color: #ecf7ff;
       color: #ecf7ff;
       text-shadow: 
-         1px 0px 4px #2b8eeb,
-         1px 1px 4px #005fb8,
-         1px 1px 4px #79beff;
+         1px 0px 4px #0b7feb,
+         1px 1px 4px #004585,
+         1px 1px 4px #57adfd;
       transition: text-shadow 0.4s ease-in;
       transition: color 0.1s ease-in;
    }
@@ -78,6 +84,7 @@ body {
       width: 100%;
       height: 100%;
       display: flex;
+      flex-grow: 1;
       flex-direction: column;
       padding: 16px 0px;
       align-items: center;
@@ -171,7 +178,16 @@ body {
          gap: 8px;
          margin-bottom: 32px;
       }
-              
+
+      /* @keyframes svg-hover {
+         50% {
+            filter:
+            drop-shadow(1px 0px 2px #54a7f5) 
+                 drop-shadow(1px 1px 2px #004688) 
+                 drop-shadow(1px 1px 2px #b1d9ff);
+         }
+      }       */
+
       #social-media {
          display: flex;
          gap: 36px;
@@ -188,7 +204,8 @@ body {
                width: 48px;
                height: 48px;
                fill: #232427;
-
+               
+               
                :hover {
                   fill: #ecf7ff;
                   filter: drop-shadow(1px 0px 4px #2b8eeb) 
@@ -196,6 +213,7 @@ body {
                           drop-shadow(1px 1px 4px #79beff);
                   transition: drop-shadow 0.3s ease;
                   transition: fill 0.1s ease;
+                  /* animation: svg-hover 4s infinite; */
                }
             }
 
@@ -253,8 +271,8 @@ body {
             padding-bottom: 32px;
             display: flex;
             flex-direction: row;
-            justify-content: center;
-            gap: 256px;
+            justify-content: space-between;
+            
       
             #links {
                display: flex;
